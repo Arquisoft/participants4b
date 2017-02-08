@@ -13,6 +13,6 @@ public class MainController {
 	    public String landing() {
 	        return "index";
 	    }
-	
+
 
 }
