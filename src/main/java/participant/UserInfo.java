@@ -54,7 +54,7 @@ public class UserInfo {
 	
     public UserInfo(String nombre, String apellidos, Date fecha_nacimiento, String residencia, String nacionalidad,
 			String dni, String email, String password) {
-    	LOG.info("Creating user " + email + ". age: " + password);
+    	LOG.info("Creating user " + email + ". password: " + password);
     	this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.fecha_nacimiento = fecha_nacimiento;
