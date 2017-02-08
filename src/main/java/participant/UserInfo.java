@@ -48,6 +48,8 @@ public class UserInfo {
 	private String password;
 
 
+	public UserInfo() {}
+	
 	public UserInfo(long id) {
 		this.id = id;
 	}
