@@ -8,21 +8,11 @@
 <body>
 <h1>Datos de usuario</h1>
 <form id='sampleform' method='post' action='' >
-<p>
-Nombre:
-</p>
-<p>
-Apellidos:
-</p>
-<p>
-Edad:
-</p>
-<p>
-DNI:
-</p>
-<p>
-Email:
-</p>
+<p th:text="'Nombre: ' + ${user.nombre}" />
+<p th:text="'Apellidos: ' + ${user.apellidos}" />
+<p th:text="'Edad: ' + ${user.edad}" />
+<p th:text="'DNI: ' + ${user.dni}" />
+<p th:text="'Email: ' + ${user.email}" />
 <p>
 <input type='submit' name='Modificar' value='Modificar datos' />
 <input type='submit' name='Cerrar' value='Cerrar sesión' />

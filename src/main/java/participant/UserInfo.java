@@ -1,5 +1,8 @@
 package participant;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.Period;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -46,6 +49,8 @@ public class UserInfo {
 
 	@NotNull
 	private String password;
+	
+	private int edad;
 
 
 	public UserInfo() {}
@@ -138,4 +143,15 @@ public class UserInfo {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public int getEdad(){
+		return edad;
+	}
+	private void setEdad(int edad){
+		this.edad = edad;
+	}
+	public void calcularEdad(){
+		LocalDate date = getFecha_nacimiento().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		setEdad(Period.between(date, LocalDate.now()).getYears());
+	}
+	
 }

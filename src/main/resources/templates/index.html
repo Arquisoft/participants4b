@@ -7,12 +7,12 @@
 </head>
 <body>
 <h1>Acesso</h1>
-<form id='sampleform' method='post' action='' >
+<form th:action="@{/}" th:object="${userInfo}" method="post" >
 <p>
-Email: <input type='text' name='Email' />
+Email: <input type='text' name='Email' th:field="*{email}" />
 </p>
 <p>
-Contraseña: <input type='text' contraseña='Contraseña' />
+Contraseña: <input type='text' contraseña='Contraseña' th:field="*{password}"/>
 </p>
 <p>
 <input type='submit' name='Submit' value='Submit' />
