@@ -27,9 +27,12 @@ public class MainController {
 	@RequestMapping("/")
 	public String landingSubmit(@ModelAttribute("userInfo") UserInfo userInfo, Model model) {
 		user = database.findByEmail(userInfo.getEmail());
-		user.calcularEdad();
-		model.addAttribute("user",user);
-		return "datos";
+		if (user != null) {
+			user.calcularEdad();
+			model.addAttribute("user", user);
+			return "datos";
+		} else
+			return "error";
 	}
-	
+
 }
