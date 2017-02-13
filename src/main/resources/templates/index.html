@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head >
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<title >Inicio</title>
+</head>
+<body>
+<h1>Acesso</h1>
+<form th:action="@{/}" th:object="${userInfo}" method="post" >
+<p>
+Email: <input type='text' name='Email' th:field="*{email}" />
+</p>
+<p>
+Contraseña: <input type='text' contraseña='Contraseña' th:field="*{password}"/>
+</p>
+<p>
+<input type='submit' name='Submit' value='Submit' />
+</p>
+</form>
+</body>
+</html>
